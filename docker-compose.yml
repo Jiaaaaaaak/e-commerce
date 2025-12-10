@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  agent-app:
+    build: .
+    container_name: ecommerce-agent
+    ports:
+      - "8000:8000"  # Backend
+      - "8501:8501"  # Frontend
+    env_file:
+      - .env
+    volumes:
+      # 掛載 data 目錄，這樣你在本機跑 ingest 產生的索引，容器內也讀得到
+      - ./data:/app/data
+      # 掛載程式碼，方便開發時熱重載 (Optional)
+      - ./app:/app/app
+      - ./frontend.py:/app/frontend.py
