@@ -22,7 +22,7 @@
 
 整個系統分為三個層次：Frontend (UI)、Backend (Agent Logic)、Data/Tooling (Knowledge/Service)。
 
-```mermaid
+'''mermaid
 graph TD
     User[Web User] -->|Streamlit UI| Frontend[Frontend (Port 8501)]
     Frontend -->|HTTP POST /api/chat| Backend[FastAPI Backend (Port 8000)]
@@ -37,8 +37,9 @@ graph TD
     Service --> Response[Response Formatter]
     GPT --> Response
     Response --> Backend
-    Backend --> Frontend
- 部署與啟動 (Docker / 本地)
+    Backend --> Frontend'''
+
+部署與啟動 (Docker / 本地)
 方案 A: 推薦使用 Docker (一鍵啟動)
 Docker 是最推薦的啟動方式，它確保了環境的可重現性，是面試時的加分項。
 
