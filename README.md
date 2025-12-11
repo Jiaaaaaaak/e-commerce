@@ -1,6 +1,6 @@
 #  E-Commerce Intelligent Agent (RAG + Intent Agent)
 
-> 電商智能客服系統，結合了 **Intent Analysis (意圖識別)** 與 **RAG (檢索增強生成)** 技術。本專案展示了 LLM 應用從核心邏輯到 Docker 容器化交付的完整流程。
+ 電商智能客服系統，結合了 **Intent Analysis (意圖識別)** 與 **RAG (檢索增強生成)** 技術。本專案展示了 LLM 應用從核心邏輯到 Docker 容器化交付的完整流程。
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![FastAPI](https://imgshields.io/badge/FastAPI-0.110-green)
@@ -22,7 +22,7 @@
 
 整個系統分為三個層次：Frontend (UI)、Backend (Agent Logic)、Data/Tooling (Knowledge/Service)。
 
-'''mermaid
+```mermaid
 graph TD
     User[Web User] -->|Streamlit UI| Frontend[Frontend (Port 8501)]
     Frontend -->|HTTP POST /api/chat| Backend[FastAPI Backend (Port 8000)]
@@ -37,7 +37,8 @@ graph TD
     Service --> Response[Response Formatter]
     GPT --> Response
     Response --> Backend
-    Backend --> Frontend'''
+    Backend --> Frontend
+```
 
 部署與啟動 (Docker / 本地)
 方案 A: 推薦使用 Docker (一鍵啟動)

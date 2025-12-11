@@ -1,4 +1,4 @@
-# app/router_chat.py (最終修正版，請替換掉你現有的內容)
+# app/router_chat.py 
 
 from fastapi import APIRouter
 # 使用相對路徑 .schemas
